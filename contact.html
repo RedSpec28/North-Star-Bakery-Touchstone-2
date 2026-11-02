@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Ask North Star Bakery a question or plan a pickup request." name="description"/>
 <title>Contact and Pre-Orders | North Star Bakery</title>
-<link href="styles.css" rel="stylesheet"/></head>
+<link href="styles.css" rel="stylesheet"/><script defer="" src="script.js"></script></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header"><div class="container header-inner"><a aria-label="North Star Bakery home" class="brand" href="index.html"><img alt="North Star Bakery logo with a bread loaf illustration" class="brand-logo" height="134" src="assets/bakery-logo-site.png" width="190"/></a><nav aria-label="Main navigation" class="site-nav">
@@ -17,43 +17,43 @@
 <li><a aria-current="page" class="active" href="contact.html">Contact and Pre-Orders</a></li>
 </ul>
 </nav></div></header>
-<main class="container main-content" id="main-content"><div class="page-intro"><p class="eyebrow">GET IN TOUCH</p><h1>Contact Us and Request a Pre-Order</h1><p class="lead">Tell us what you're planning, and include details about the items
-      you have in mind. This student HTML-only form demonstrates browser
-      validation; it does not send information to a bakery.</p></div>
-
-
-
-
+<main class="container main-content" id="main-content"><div class="page-intro"><p class="eyebrow">GET IN TOUCH</p><h1>Contact Us and Request a Pre-Order</h1><p class="lead">Ask a question or prepare a pickup request. This demo checks your entries on the page but does not send them to the bakery.</p></div>
 <div class="contact-layout"><section aria-labelledby="request-heading" class="content-section form-panel">
 <h2 id="request-heading">Inquiry and Pre-Order Form</h2>
-<form action="#" method="get">
+
+<div aria-labelledby="saved-inquiry-heading" class="saved-inquiry">
+<h3 id="saved-inquiry-heading">Bring your saved picks</h3>
+<p aria-live="polite" id="saved-inquiry-summary">Favorites you save on the Products page will show up here.</p>
+<button class="button button-outline" id="use-favorites" type="button">Add saved picks to item details</button>
+<p class="small-note"><a href="products.html#favorites">Browse and save bakery picks</a></p>
+</div><form action="#" id="bakery-request-form" method="post">
 <fieldset class="form-group">
 <legend>Your Contact Information</legend>
 <p>
 <label for="customer-name">Full name (required)</label><br/>
-<input autocomplete="name" id="customer-name" maxlength="80" minlength="2" name="customer_name" required="" type="text"/>
+<input aria-describedby="name-error" autocomplete="name" id="customer-name" maxlength="80" minlength="2" name="customer_name" required="" type="text"/><span aria-live="polite" class="field-error" id="name-error"></span>
 </p>
 <p>
 <label for="customer-email">Email address (required)</label><br/>
-<input autocomplete="email" id="customer-email" name="customer_email" required="" type="email"/>
+<input aria-describedby="email-error" autocomplete="email" id="customer-email" name="customer_email" required="" type="email"/><span aria-live="polite" class="field-error" id="email-error"></span>
 </p>
 </fieldset>
 <fieldset class="form-group">
 <legend>What Can We Help You With?</legend>
 <p>Choose one request type (required).</p>
 <p>
-<input id="pre-order" name="request_type" required="" type="radio" value="pre-order"/>
+<input aria-describedby="type-error" id="pre-order" name="request_type" required="" type="radio" value="pre-order"/>
 <label class="radio-label" for="pre-order">Pre-order request</label><br/>
-<input id="question" name="request_type" type="radio" value="general-question"/>
+<input aria-describedby="type-error" id="question" name="request_type" type="radio" value="general-question"/>
 <label class="radio-label" for="question">General question</label>
-</p>
+<span aria-live="polite" class="field-error" id="type-error"></span></p><p aria-live="polite" class="small-note" id="remembered-choice"></p>
 <p>
 <label for="pickup-date">Preferred pickup date (for pre-orders)</label><br/>
-<input id="pickup-date" name="pickup_date" type="date"/>
+<input aria-describedby="date-error" id="pickup-date" name="pickup_date" type="date"/><span aria-live="polite" class="field-error" id="date-error"></span>
 </p>
 <p>
 <label for="item-details">Items, quantities, or question (required)</label><br/>
-<textarea cols="45" id="item-details" maxlength="800" minlength="10" name="item_details" required="" rows="5"></textarea>
+<textarea aria-describedby="details-error" cols="45" id="item-details" maxlength="800" minlength="10" name="item_details" required="" rows="5"></textarea><span aria-live="polite" class="field-error" id="details-error"></span>
 </p>
 <p>
 <label for="allergy-notes">Allergy notes (optional)</label><br/>
@@ -62,7 +62,7 @@
 <p>Please discuss allergies with the bakery before ordering;
             a request cannot guarantee an allergen-free product.</p>
 </fieldset>
-<p><button class="button button-primary" type="submit">Submit Form (Demo Only)</button></p>
+<p><button class="button button-primary" type="submit">Check Request (Demo Only)</button></p><p aria-live="polite" id="form-status" role="status"></p>
 </form>
 </section><section aria-labelledby="visit-us" class="content-section location-panel" id="location-hours">
 <h2 id="visit-us">Location and Hours</h2>
@@ -82,4 +82,3 @@
 <footer class="site-footer"><div class="container footer-inner"><p>© 2026 North Star Bakery. Baked for our neighbors.</p><p>Student website example: hours, prices, and business details are illustrative.</p></div></footer>
 </body>
 </html>
-
