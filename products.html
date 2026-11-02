@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Browse North Star Bakery breads, pastries, cakes, and sample prices." name="description"/>
 <title>Products | North Star Bakery</title>
-<link href="styles.css" rel="stylesheet"/></head>
+<link href="styles.css" rel="stylesheet"/><script defer="" src="script.js"></script></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header"><div class="container header-inner"><a aria-label="North Star Bakery home" class="brand" href="index.html"><img alt="North Star Bakery logo with a bread loaf illustration" class="brand-logo" height="134" src="assets/bakery-logo-site.png" width="190"/></a><nav aria-label="Main navigation" class="site-nav">
@@ -19,8 +19,6 @@
 </nav></div></header>
 <main class="container main-content" id="main-content"><div class="page-intro"><p class="eyebrow">OUR BAKES</p><h1>Fresh from Our Oven</h1><p class="lead">Our case changes with the season, but you'll always find something
       made by hand. These are sample price ranges, not online checkout prices.</p></div>
-
-
 <section aria-labelledby="breads" class="content-section bread-section">
 <h2 id="breads">Breads</h2><div class="bread-layout"><div class="bread-copy"><p>Choose an everyday loaf or bring home something for a shared meal.</p><ul>
 <li><strong>Country bread:</strong> Crusty, sliceable loaves ($6-$9).</li>
@@ -31,10 +29,6 @@
 <figcaption>Our Signature Loaf is a customer favorite for sharing
           at the table or taking home for the week.</figcaption>
 </figure></div></div>
-
-
-
-
 </section><div class="product-card-grid"><section aria-labelledby="pastries" class="content-section info-card">
 <h2 id="pastries">Pastries</h2>
 <p>Stop in for a morning pastry or choose a small box for coworkers.</p>
@@ -51,16 +45,31 @@
 <p>Sample starting range: $30-$75, depending on size and decoration.</p>
 </section></div>
 
-
+<section aria-labelledby="favorites-heading" class="content-section favorites-section" id="favorites">
+<div class="favorites-intro">
+<div><p class="eyebrow">PLAN YOUR VISIT</p><h2 id="favorites-heading">Save Your Bakery Picks</h2>
+<p>See something you like? Save it here, then bring your list to the pre-order inquiry. Your picks stay in this browser until you remove them.</p></div>
+<div aria-live="polite" class="saved-counter"><strong id="favorites-count">0</strong><span> saved picks</span></div>
+</div>
+<div class="favorites-layout">
+<div><h3>Choose your favorites</h3><div class="favorite-catalog" id="favorite-catalog"></div>
+<noscript><p>Enable JavaScript to save your bakery picks. You can still browse all our breads and pastries above.</p></noscript></div>
+<aside aria-labelledby="saved-heading" class="saved-panel">
+<h3 id="saved-heading">Your saved picks</h3>
+<p aria-live="polite" class="small-note" id="favorites-note"></p>
+<ul class="saved-list" id="favorites-list"><li>No picks saved yet.</li></ul>
+<a class="button button-primary" href="contact.html">Continue to pre-order inquiry</a>
+<button class="button button-outline" id="clear-favorites" type="button">Clear saved picks</button>
+<p class="small-note">This is a planning list, not an order. The bakery will need to confirm availability.</p>
+</aside>
+</div>
+</section>
 <section aria-labelledby="planning" class="content-section planning-panel">
 <h2 id="planning">Planning a Pickup?</h2>
-<p>Use our <a href="contact.html">pre-order inquiry form</a> to tell us
-        what you'd like. Our team can confirm availability, ingredients,
-        timing, and the final price before an order is placed.</p>
-<p>This HTML-only sample does not accept payments or submit requests.</p>
+<p>Use our pre-order inquiry form to ask about availability, ingredients, and pickup times. Your saved picks can be copied into the form on the next page.</p>
+<p>This is a class demo. No payments or orders are processed.</p>
 </section>
 </main>
 <footer class="site-footer"><div class="container footer-inner"><p>© 2026 North Star Bakery. Baked for our neighbors.</p><p>Student website example: hours, prices, and business details are illustrative.</p></div></footer>
 </body>
 </html>
-
